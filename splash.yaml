@@ -1,0 +1,46 @@
+# Configuration for flutter_native_splash package
+# Run this command to generate splash screen
+# ----------------------------- TO ADD ----------------------------------
+# flutter pub run flutter_native_splash:create --path=splash.yaml
+
+# ---------------------------- TO REMOVE -----------------------------------
+# flutter pub run flutter_native_splash:remove
+# flutter clean
+# flutter pub get
+flutter_native_splash:
+  # Background color for the splash screen
+  color: "#F6F6F6"
+
+  # Background color for the splash screen in dark mode
+  color_dark: "#1C1C1C"
+
+  # Image asset for the splash screen
+  image: assets/logo/applogo.png
+
+  # Image asset for the splash screen in dark mode
+  image_dark: assets/logo/applogo.png
+
+  # Image branding asset for the splash screen in dark & light mode
+  branding: assets/logo/appbrand.png
+  branding_dark: assets/logo/appbrand.png
+  branding_bottom_padding: 24
+
+  # Configuration for Android 12 splash screen
+  android_12:
+    # Background color for the splash screen on Android 12
+    color: "#F6F6F6"
+
+    # Background color for the splash screen in dark mode on Android 12
+    color_dark: "#1C1C1C"
+
+    # Image asset for the splash screen on Android 12
+    image: assets/logo/applogo.png
+
+    # Image asset for the splash screen in dark mode on Android 12
+    image_dark: assets/logo/applogo.png
+
+    # Image branding asset for the splash screen in dark & light mode
+    branding: assets/logo/appbrand.png
+    branding_dark: assets/logo/appbrand.png
+  # Disable splash screen on the web platform
+  web: false
