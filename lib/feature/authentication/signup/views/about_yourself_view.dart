@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:vento_store/core/constants/app_sizes.dart';
+import 'package:vento_store/core/constants/app_strings.dart';
+import 'package:vento_store/feature/authentication/signup/viewmodel/signup_view_model.dart';
 import 'package:vento_store/feature/authentication/signup/widgets/signup_form_header.dart';
 import 'package:vento_store/shared/styles/y_spacing_style.dart';
 import 'package:vento_store/shared/widgets/y_linear_progress_indicator.dart';
 import 'package:vento_store/shared/widgets/y_text_form_field.dart';
-
-import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/constants/app_strings.dart';
 
 class AboutYourself extends StatelessWidget {
   const AboutYourself({super.key});
@@ -51,7 +52,8 @@ class AboutYourself extends StatelessWidget {
                 width: double.infinity,
                 height: 56,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () =>
+                      context.read<SignupViewModel>().vreifyAboutInfo(),
                   child: const Text(YAppString.continues),
                 ),
               ),

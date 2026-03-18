@@ -20,4 +20,10 @@ class SignupViewModel with ChangeNotifier {
     NavigationServices.goTo(AppRoutes.aboutYourself);
     notifyListeners();
   }
+
+  /// --- Check & vreify about inof  if correct  move to next step screen
+  void vreifyAboutInfo() {
+    NavigationServices.goTo(AppRoutes.interest);
+    notifyListeners();
+  }
 }
