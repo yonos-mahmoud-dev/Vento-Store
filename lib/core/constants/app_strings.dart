@@ -7,6 +7,7 @@ class YAppString {
   static const String email = 'E-mail';
   static const String password = 'Password';
   static const String continueWith = 'Or Continue With';
+  static const String continues = 'Continue';
 
   /// --- Login and Sigin Up Screen Txt
   static const String loginTitle = 'Happy To See You Again!';

@@ -20,6 +20,7 @@ class YTextFromField extends StatelessWidget {
       controller: controller,
       obscureText: scureText,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.all(16),
         labelText: lableText,
         prefixIcon: prfIcon,
         suffixIcon: sufIcon,
