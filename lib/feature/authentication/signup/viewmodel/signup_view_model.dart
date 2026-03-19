@@ -26,4 +26,12 @@ class SignupViewModel with ChangeNotifier {
     NavigationServices.goTo(AppRoutes.interest);
     notifyListeners();
   }
+
+  /// --- Check & vreify interest inof  if had choose  move to next step screen
+  void setPersonalInterset() async {
+    NavigationServices.goTo(AppRoutes.stepEveryThings);
+    await Future.delayed(const Duration(seconds: 10));
+    NavigationServices.goTo(AppRoutes.signIn);
+    notifyListeners();
+  }
 }

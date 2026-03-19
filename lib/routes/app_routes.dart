@@ -8,4 +8,5 @@ class AppRoutes {
   static const interest = '/interset';
   static const stepEveryThings = '/stepEveryThings';
   static const forgotPass = '/forgotpassword';
+  static const bottomNavigation = 'bottomNavigation';
 }
