@@ -24,29 +24,30 @@ class AboutYourself extends StatelessWidget {
             children: [
               const YLinearProgressIndicator(value: 0.6, text: '3/5'),
               const SignUpFromHeader(
-                headerTitle: 'Tell Us About Your Self!',
-                headerSubTitle:
-                    'We use this info to create your profile\nand keep it secure.',
+                headerTitle: YAppString.aboutTitle,
+                headerSubTitle: YAppString.aboutSubTitle,
               ),
               const SizedBox(height: YSizes.spaceBtwSections),
-              const SizedBox(child: YTextFromField(lableText: 'Full Name')),
+              const SizedBox(
+                child: YTextFromField(lableText: YAppString.fullName),
+              ),
               const SizedBox(height: YSizes.spaceBtwInputFields),
               const YTextFromField(
-                lableText: 'Date of Birth',
+                lableText: YAppString.dataOfBirth,
                 sufIcon: Icon(Icons.calendar_month),
               ),
               const SizedBox(height: YSizes.spaceBtwInputFields),
               const YTextFromField(
-                lableText: 'Country Regoin',
+                lableText: YAppString.country,
                 sufIcon: Icon(Icons.keyboard_arrow_down_sharp),
               ),
               const SizedBox(height: YSizes.spaceBtwInputFields),
               const YTextFromField(
-                lableText: 'Address',
+                lableText: YAppString.address,
                 sufIcon: Icon(Icons.location_on),
               ),
               const SizedBox(height: YSizes.spaceBtwInputFields),
-              const YTextFromField(lableText: 'Phone Number'),
+              const YTextFromField(lableText: YAppString.phoneNumber),
               const SizedBox(height: YSizes.spaceBtwSections),
               SizedBox(
                 width: double.infinity,

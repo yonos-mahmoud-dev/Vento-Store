@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vento_store/core/constants/app_colors.dart';
 import 'package:vento_store/core/constants/app_sizes.dart';
+import 'package:vento_store/core/constants/app_strings.dart';
 import 'package:vento_store/core/services/navigation_services.dart';
 import 'package:vento_store/core/utils/helpers/exports.dart';
 import 'package:vento_store/feature/authentication/signup/widgets/signup_form_header.dart';
@@ -30,8 +31,8 @@ class VerifyEmailView extends StatelessWidget {
 
               /// --- verif  title & subTitle
               const SignUpFromHeader(
-                headerTitle: 'Verify your email address',
-                headerSubTitle: 'We sent 5-digit code to your email.',
+                headerTitle: YAppString.verifyEmailTitle,
+                headerSubTitle: YAppString.verifyEmailSubTitle,
               ),
               const SizedBox(height: YSizes.spaceBtwSections),
 
@@ -66,14 +67,14 @@ class VerifyEmailView extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'Don\'t receive the code ?',
+                    YAppString.dontRecived,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   const SizedBox(width: YSizes.xs),
                   TextButton(
                     onPressed: () {},
                     child: Text(
-                      'Tap To Resend',
+                      YAppString.tapToResend,
                       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         color: YAppColors.primaryGold,
                       ),
@@ -88,7 +89,7 @@ class VerifyEmailView extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () =>
                       NavigationServices.goTo(AppRoutes.aboutYourself),
-                  child: const Text('Continue'),
+                  child: const Text(YAppString.continues),
                 ),
               ),
             ],

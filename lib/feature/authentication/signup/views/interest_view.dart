@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vento_store/core/constants/app_colors.dart';
 import 'package:vento_store/core/constants/app_sizes.dart';
+import 'package:vento_store/core/constants/app_strings.dart';
 import 'package:vento_store/feature/authentication/signup/viewmodel/signup_view_model.dart';
 import 'package:vento_store/feature/authentication/signup/widgets/signup_form_header.dart';
 import 'package:vento_store/shared/styles/y_spacing_style.dart';
@@ -39,9 +40,8 @@ class InterestView extends StatelessWidget {
               const YLinearProgressIndicator(value: 0.8, text: '4/5'),
               const SizedBox(height: YSizes.spaceBtwItems),
               const SignUpFromHeader(
-                headerTitle: 'Choose Shopping Categorise',
-                headerSubTitle:
-                    'We\'ll tailro insights based on what mtters to you best.',
+                headerTitle: YAppString.intersetTitle,
+                headerSubTitle: YAppString.intersetSubTitle,
               ),
               const SizedBox(height: YSizes.spaceBtwSections),
 
@@ -80,7 +80,7 @@ class InterestView extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () =>
                       context.read<SignupViewModel>().setPersonalInterset(),
-                  child: const Text('Continuo'),
+                  child: const Text(YAppString.continues),
                 ),
               ),
             ],

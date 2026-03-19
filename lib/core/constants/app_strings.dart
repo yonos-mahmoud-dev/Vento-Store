@@ -19,6 +19,22 @@ class YAppString {
   static const String createAccount = 'Create Account';
   static const String rememberMe = 'Remember Me';
   static const String forgotPass = 'Forgot Password';
+  static const String aboutTitle = 'Tell Us About Your Self!';
+  static const String aboutSubTitle =
+      'We use this info to create your profile\nand keep it secure.';
+  static const String fullName = 'Full Name';
+  static const String dataOfBirth = 'Date of Birth';
+  static const String country = 'Country Regoin';
+  static const String address = 'Address';
+  static const String phoneNumber = 'Phone Number';
+  static const String intersetTitle = 'Choose Shopping Categorise';
+  static const String intersetSubTitle =
+      'We\'ll tailro insights based on what mtters to you best.';
+  static const String verifyEmailTitle = 'Verify your email address';
+  static const String verifyEmailSubTitle =
+      'We sent 5-digit code to your email.';
+  static const String dontRecived = 'Don\'t receive the code ?';
+  static const String tapToResend = 'Tap To Resend';
 
   /// --- Onbarding Screens Texts
   static const String onBoardingTitle1 = 'wear your story.';
