@@ -31,7 +31,7 @@ class YCustomAppbar extends StatelessWidget implements PreferredSizeWidget {
         leading: showBackArrow
             ? IconButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.canPop(context);
                 },
                 icon: const Icon(Iconsax.arrow_left),
               )

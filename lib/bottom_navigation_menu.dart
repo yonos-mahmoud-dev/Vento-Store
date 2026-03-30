@@ -12,23 +12,53 @@ class BottomNavigationMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool isDark = YHelperFunctions.isDarkMode(context);
     final bottomMenuProvider = context.watch<BottomNavigationMenuProvider>();
+
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         selectedIndex: bottomMenuProvider.currentIndex,
+        height: 80,
         onDestinationSelected: (index) =>
             bottomMenuProvider.updateCurrentIndex(index),
-        elevation: 0.0,
+        elevation: 0.5,
         backgroundColor: isDark
-            ? YAppColors.darkContainer
-            : YAppColors.textWhite,
+            ? YAppColors.primaryDarkBg
+            : YAppColors.primarylightBg,
         indicatorColor: isDark
-            ? YAppColors.textWhite.withAlpha(100)
-            : YAppColors.accentGold.withAlpha(100),
+            ? YAppColors.primaryGold
+            : YAppColors.primaryGold,
+        labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>((
+          Set<WidgetState> states,
+        ) {
+          if (states.contains(WidgetState.selected)) {
+            return const TextStyle(
+              color: YAppColors.primaryGold,
+            ); // Selected color
+          } else {
+            return const TextStyle(color: YAppColors.borderLightecondary);
+          }
+          // Unselected color
+        }),
         destinations: const [
-          NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
-          NavigationDestination(icon: Icon(Iconsax.heart), label: 'WishList'),
-          NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
+          NavigationDestination(
+            selectedIcon: Icon(Iconsax.home, color: Colors.white),
+            icon: Icon(Iconsax.home),
+            label: 'Home',
+          ),
+          NavigationDestination(
+            selectedIcon: Icon(Iconsax.shop, color: Colors.white),
+            icon: Icon(Iconsax.shop),
+            label: 'Store',
+          ),
+          NavigationDestination(
+            selectedIcon: Icon(Iconsax.heart, color: Colors.white),
+            icon: Icon(Iconsax.heart),
+            label: 'WishList',
+          ),
+          NavigationDestination(
+            selectedIcon: Icon(Iconsax.user, color: Colors.white),
+            icon: Icon(Iconsax.user),
+            label: 'Profile',
+          ),
         ],
       ),
       body: bottomMenuProvider.screens[bottomMenuProvider.currentIndex],
@@ -41,6 +71,7 @@ class BottomNavigationMenuProvider with ChangeNotifier {
 
   void updateCurrentIndex(int index) {
     currentIndex = index;
+
     notifyListeners();
   }
 

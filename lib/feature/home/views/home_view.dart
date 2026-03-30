@@ -8,25 +8,27 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          YCustomAppbar(
-            title: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Good day for shopping',
-                  style: Theme.of(context).textTheme.labelSmall,
-                ),
-                Text(
-                  'Yonos Mahmoud',
-                  style: Theme.of(context).textTheme.headlineSmall,
-                ),
-              ],
+      body: SafeArea(
+        child: ListView(
+          children: [
+            YCustomAppbar(
+              title: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Good day for shopping',
+                    style: Theme.of(context).textTheme.labelSmall,
+                  ),
+                  Text(
+                    'Yonos Mahmoud',
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                ],
+              ),
+              actions: [YCartCounterIcon(onPressedIcon: () {})],
             ),
-            actions: [YCartCounterIcon(onPressedIcon: () {})],
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

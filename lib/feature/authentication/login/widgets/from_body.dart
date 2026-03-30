@@ -60,7 +60,7 @@ class FromBody extends StatelessWidget {
             height: 56,
             child: ElevatedButton(
               onPressed: () {
-                NavigationServices.goTo(AppRoutes.bottomNavigation);
+                NavigationServices.replaceAllTo(AppRoutes.bottomNavigation);
               },
               child: const Text(YAppString.signIn),
             ),
