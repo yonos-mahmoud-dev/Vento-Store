@@ -73,7 +73,7 @@ class FromBody extends StatelessWidget {
             height: 56,
             child: OutlinedButton(
               onPressed: () {
-                NavigationServices.goTo(AppRoutes.signUp);
+                NavigationServices.replaceAllTo(AppRoutes.signUp);
               },
               child: const Text(YAppString.createAccount),
             ),
