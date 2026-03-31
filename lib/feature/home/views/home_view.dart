@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:vento_store/shared/widgets/y_cart_counter_icon.dart';
-import 'package:vento_store/shared/widgets/y_custom_appbar.dart';
+import 'package:iconsax/iconsax.dart';
+
+import 'package:vento_store/core/constants/app_sizes.dart';
+
+import 'package:vento_store/feature/home/widgets/y_home_app_bar.dart';
+import 'package:vento_store/shared/widgets/y_search_container.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -9,25 +13,39 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(
-          children: [
-            YCustomAppbar(
-              title: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Good day for shopping',
-                    style: Theme.of(context).textTheme.labelSmall,
-                  ),
-                  Text(
-                    'Yonos Mahmoud',
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                ],
-              ),
-              actions: [YCartCounterIcon(onPressedIcon: () {})],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: YSizes.defaultSpace,
             ),
-          ],
+            child: Column(
+              children: [
+                /// -- Cuatom Home AppBar
+                const YHomeAppBar(),
+                const SizedBox(height: YSizes.spaceBtwSections),
+
+                /// --- SearchBar Container
+                const YSearchContainer(
+                  searchIcon: Iconsax.search_favorite,
+                  searchTitle: 'Search in store',
+                ),
+                const SizedBox(height: YSizes.spaceBtwSections),
+
+                /// --- Categorise
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text('Popular Categories'),
+                        TextButton(onPressed: () {}, child: Text('View All')),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

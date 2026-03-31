@@ -21,26 +21,24 @@ class YCustomAppbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsetsGeometry.symmetric(horizontal: YSizes.md),
-      child: AppBar(
-        automaticallyImplyLeading: false,
-        title: title,
-        elevation: 0.0,
-        centerTitle: false,
-        leading: showBackArrow
-            ? IconButton(
-                onPressed: () {
-                  Navigator.canPop(context);
-                },
-                icon: const Icon(Iconsax.arrow_left),
-              )
-            : leadingIcon != null
-            ? IconButton(onPressed: onLeadingPressed, icon: Icon(leadingIcon))
-            : null,
-        backgroundColor: Colors.transparent,
-        actions: actions,
-      ),
+    return AppBar(
+      automaticallyImplyLeading: false,
+      title: title,
+      elevation: 0.0,
+      centerTitle: false,
+
+      leading: showBackArrow
+          ? IconButton(
+              onPressed: () {
+                Navigator.canPop(context);
+              },
+              icon: const Icon(Iconsax.arrow_left),
+            )
+          : leadingIcon != null
+          ? IconButton(onPressed: onLeadingPressed, icon: Icon(leadingIcon))
+          : null,
+      backgroundColor: Colors.transparent,
+      actions: actions,
     );
   }
 
