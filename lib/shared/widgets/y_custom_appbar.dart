@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:vento_store/core/constants/app_sizes.dart';
 import 'package:vento_store/core/utils/device_utility.dart';
 
 class YCustomAppbar extends StatelessWidget implements PreferredSizeWidget {
