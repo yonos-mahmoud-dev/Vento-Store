@@ -20,4 +20,11 @@ class YAppImages {
       'assets/images/onboarding/sammy-line-delivery.gif';
   static const String onBoardingImg4 =
       ' assets/images/onboarding/onboarding7.webp';
+
+  /// Banners Images
+  static const String promoBannar1 = 'assets/images/banners/promo-banner-1.png';
+  static const String promoBannar2 = 'assets/images/banners/promo-banner-2.png';
+  static const String promoBannar3 = 'assets/images/banners/promo-banner-3.png';
+  static const String promoBannar4 = 'assets/images/banners/promo-banner-4.png';
+  static const String promoBannar5 = 'assets/images/banners/promo-banner-5.png';
 }

@@ -73,6 +73,7 @@ flutter:
     - assets/logo/
     - assets/icons/
     - assets/images/onboarding/
+    - assets/images/banners/
 
   # example:
   fonts:
