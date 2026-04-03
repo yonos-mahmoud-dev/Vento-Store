@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:provider/provider.dart';
-import 'package:vento_store/core/constants/app_colors.dart';
-
 import 'package:vento_store/core/constants/app_sizes.dart';
-import 'package:vento_store/feature/home/viewmodel/home_view_model.dart';
+import 'package:vento_store/feature/home/widgets/categories/y_best_seller_categories.dart';
+import 'package:vento_store/feature/home/widgets/categories/y_new_arrival.dart';
 import 'package:vento_store/feature/home/widgets/y_carousel_slider.dart';
 import 'package:vento_store/feature/home/widgets/y_dot_rounded_container.dart';
 import 'package:vento_store/feature/home/widgets/y_home_app_bar.dart';
 import 'package:vento_store/feature/home/widgets/y_home_categories.dart';
 
-import 'package:vento_store/shared/widgets/y_search_container.dart';
+import 'package:vento_store/shared/widgets/container/y_search_container.dart';
+import 'package:vento_store/shared/widgets/layout/y_grid_layout.dart';
 import 'package:vento_store/shared/widgets/y_seation_heading.dart';
 
 class HomeView extends StatelessWidget {
@@ -18,26 +17,28 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: YSizes.defaultSpace),
+            padding: const EdgeInsets.symmetric(
+              horizontal: YSizes.defaultSpace,
+            ),
             child: Column(
               children: [
                 /// --- Cuatom Home AppBar
-                YHomeAppBar(),
-                SizedBox(height: YSizes.spaceBtwSections),
+                const YHomeAppBar(),
+                const SizedBox(height: YSizes.spaceBtwSections / 2),
 
                 /// --- SearchBar Container
-                YSearchContainer(
+                const YSearchContainer(
                   searchIcon: Iconsax.search_favorite,
                   searchTitle: 'Search in store',
                 ),
-                SizedBox(height: YSizes.spaceBtwSections),
+                const SizedBox(height: YSizes.spaceBtwSections),
 
                 /// --- Categorise
-                Column(
+                const Column(
                   children: [
                     /// -- heading seaction
                     YSeactionHeading(
@@ -50,10 +51,10 @@ class HomeView extends StatelessWidget {
                     YHomeCategories(),
                   ],
                 ),
-                SizedBox(height: YSizes.spaceBtwSections),
+                const SizedBox(height: YSizes.spaceBtwSections),
 
                 /// --- Home Promo Slider
-                Column(
+                const Column(
                   children: [
                     // -- Slider
                     YCarouselDlider(),
@@ -61,6 +62,38 @@ class HomeView extends StatelessWidget {
                     // -- Slider Dotnavigatios
                     YDotRoundedContainer(),
                   ],
+                ),
+                const SizedBox(height: YSizes.spaceBtwSections),
+
+                /// --- Seaction Heading
+                const YSeactionHeading(
+                  title: 'Best Seller',
+                  showViewAllBtn: true,
+                ),
+
+                /// --- Best Sellers Categories
+                YGridLayOut(
+                  itemCount: 4,
+                  mainAxisExtent: 275,
+                  itemBuilder: (BuildContext context, int index) {
+                    return const YBestSellerCategories();
+                  },
+                ),
+                const SizedBox(height: YSizes.spaceBtwSections),
+
+                /// --- Seaction Heading
+                const YSeactionHeading(
+                  title: 'New Arrival',
+                  showViewAllBtn: true,
+                ),
+
+                /// --- Best Sellers Categories
+                YGridLayOut(
+                  itemCount: 4,
+                  mainAxisExtent: 275,
+                  itemBuilder: (BuildContext context, int index) {
+                    return const YNewArrival();
+                  },
                 ),
               ],
             ),

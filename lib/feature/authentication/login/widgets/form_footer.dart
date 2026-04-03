@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_strings.dart';
-import '../../../../shared/widgets/social_buttons.dart';
+import '../../../../shared/widgets/icons/social_buttons.dart';
 import '../../../../shared/widgets/y_divider.dart';
 
 class FormFooter extends StatelessWidget {
