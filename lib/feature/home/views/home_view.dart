@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vento_store/core/constants/app_sizes.dart';
 import 'package:vento_store/feature/home/widgets/categories/y_best_seller_categories.dart';
+import 'package:vento_store/feature/home/widgets/categories/y_hot_collections.dart';
+import 'package:vento_store/feature/home/widgets/categories/y_hot_trending.dart';
 import 'package:vento_store/feature/home/widgets/categories/y_new_arrival.dart';
 import 'package:vento_store/feature/home/widgets/y_carousel_slider.dart';
 import 'package:vento_store/feature/home/widgets/y_dot_rounded_container.dart';
@@ -63,7 +65,7 @@ class HomeView extends StatelessWidget {
                     YDotRoundedContainer(),
                   ],
                 ),
-                const SizedBox(height: YSizes.spaceBtwSections),
+                const SizedBox(height: YSizes.spaceBtwSections / 2),
 
                 /// --- Seaction Heading
                 const YSeactionHeading(
@@ -73,13 +75,13 @@ class HomeView extends StatelessWidget {
 
                 /// --- Best Sellers Categories
                 YGridLayOut(
-                  itemCount: 4,
+                  itemCount: 10,
                   mainAxisExtent: 275,
                   itemBuilder: (BuildContext context, int index) {
                     return const YBestSellerCategories();
                   },
                 ),
-                const SizedBox(height: YSizes.spaceBtwSections),
+                const SizedBox(height: YSizes.spaceBtwSections / 2),
 
                 /// --- Seaction Heading
                 const YSeactionHeading(
@@ -87,12 +89,44 @@ class HomeView extends StatelessWidget {
                   showViewAllBtn: true,
                 ),
 
-                /// --- Best Sellers Categories
+                /// --- Best New Arrival Categories
                 YGridLayOut(
-                  itemCount: 4,
+                  itemCount: 10,
                   mainAxisExtent: 275,
                   itemBuilder: (BuildContext context, int index) {
                     return const YNewArrival();
+                  },
+                ),
+                const SizedBox(height: YSizes.spaceBtwSections / 2),
+
+                /// --- Seaction Heading
+                const YSeactionHeading(
+                  title: 'Hot Trending',
+                  showViewAllBtn: true,
+                ),
+
+                /// --- Best New Arrival Categories
+                YGridLayOut(
+                  itemCount: 10,
+                  mainAxisExtent: 275,
+                  itemBuilder: (BuildContext context, int index) {
+                    return const YHotTrending();
+                  },
+                ),
+                const SizedBox(height: YSizes.spaceBtwSections / 2),
+
+                /// --- Seaction Heading
+                const YSeactionHeading(
+                  title: 'Hot Collections',
+                  showViewAllBtn: true,
+                ),
+
+                /// --- Best Hot Collections Categories
+                YGridLayOut(
+                  itemCount: 10,
+                  mainAxisExtent: 275,
+                  itemBuilder: (BuildContext context, int index) {
+                    return const YHotCollections();
                   },
                 ),
               ],
