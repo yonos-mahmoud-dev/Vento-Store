@@ -5,10 +5,10 @@ import 'package:vento_store/core/constants/app_sizes.dart';
 import 'package:vento_store/core/constants/app_strings.dart';
 import 'package:vento_store/core/services/navigation_services.dart';
 import 'package:vento_store/routes/app_routes.dart';
-import 'package:vento_store/shared/widgets/y_text_form_field.dart';
+import 'package:vento_store/shared/widgets/text_form/y_text_form_field.dart';
 
-class FromBody extends StatelessWidget {
-  const FromBody({super.key});
+class LoginFromBody extends StatelessWidget {
+  const LoginFromBody({super.key});
 
   @override
   Widget build(BuildContext context) {

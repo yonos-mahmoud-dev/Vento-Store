@@ -5,8 +5,8 @@ import 'package:vento_store/core/constants/app_strings.dart';
 import 'package:vento_store/feature/authentication/signup/viewmodel/signup_view_model.dart';
 import 'package:vento_store/feature/authentication/signup/widgets/signup_form_header.dart';
 import 'package:vento_store/shared/styles/y_spacing_style.dart';
-import 'package:vento_store/shared/widgets/y_linear_progress_indicator.dart';
-import 'package:vento_store/shared/widgets/y_text_form_field.dart';
+import 'package:vento_store/shared/widgets/progress_indecator/y_linear_progress_indicator.dart';
+import 'package:vento_store/shared/widgets/text_form/y_text_form_field.dart';
 
 class AboutYourself extends StatelessWidget {
   const AboutYourself({super.key});

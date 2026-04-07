@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:vento_store/core/constants/app_images.dart';
 import 'package:vento_store/core/constants/app_sizes.dart';
 import 'package:vento_store/core/constants/app_strings.dart';
-import 'package:vento_store/feature/authentication/login/widgets/form_footer.dart';
-import 'package:vento_store/feature/authentication/login/widgets/from_body.dart';
-import 'package:vento_store/feature/authentication/login/widgets/from_header.dart';
+import 'package:vento_store/feature/authentication/login/widgets/login_form_footer.dart';
+import 'package:vento_store/feature/authentication/login/widgets/login_from_body.dart';
+import 'package:vento_store/feature/authentication/login/widgets/login_from_header.dart';
 import 'package:vento_store/shared/styles/y_spacing_style.dart';
 
 class SignInView extends StatelessWidget {
@@ -21,7 +21,7 @@ class SignInView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               /// --- From Header Logo Image & title & subTitle
-              FromHeader(
+              LoginFromHeader(
                 headerLogoImg: YAppImages.appLogo2,
                 headerTitle: YAppString.loginTitle,
                 headerSubTitle: YAppString.loginSubTitle,
@@ -30,10 +30,10 @@ class SignInView extends StatelessWidget {
               SizedBox(height: YSizes.spaceBtwSections),
 
               /// --- From Body
-              FromBody(),
+              LoginFromBody(),
 
               /// --- Form Footer
-              FormFooter(),
+              LoginFormFooter(),
             ],
           ),
         ),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 
-class FromHeader extends StatelessWidget {
-  const FromHeader({
+class LoginFromHeader extends StatelessWidget {
+  const LoginFromHeader({
     super.key,
     required this.headerLogoImg,
     required this.headerTitle,

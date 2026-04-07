@@ -7,7 +7,7 @@ import 'package:vento_store/core/utils/helpers/exports.dart';
 import 'package:vento_store/feature/authentication/signup/widgets/signup_form_header.dart';
 import 'package:vento_store/routes/app_routes.dart';
 import 'package:vento_store/shared/styles/y_spacing_style.dart';
-import 'package:vento_store/shared/widgets/y_linear_progress_indicator.dart';
+import 'package:vento_store/shared/widgets/progress_indecator/y_linear_progress_indicator.dart';
 
 class VerifyEmailView extends StatelessWidget {
   const VerifyEmailView({super.key});

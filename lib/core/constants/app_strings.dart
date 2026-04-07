@@ -9,6 +9,17 @@ class YAppString {
   static const String continueWith = 'Or Continue With';
   static const String continues = 'Continue';
 
+  /// --- Onbarding Screens Texts
+  static const String onBoardingTitle1 = 'wear your story.';
+  static const String onBoardingTitle2 = 'curated just for you.';
+  static const String onBoardingTitle3 = 'discover new trends.';
+  static const String onBoardingSubTitle1 =
+      'Style is personal. Mix, match and show\nthe world your look.';
+  static const String onBoardingSubTitle2 =
+      'Hand-picked outfits and accessories that match your vibe.';
+  static const String onBoardingSubTitle3 =
+      'From elegant dresses to chic jackets and heels explore what’s treading.';
+
   /// --- Login and Sigin Up Screen Txt
   static const String loginTitle = 'Happy To See You Again!';
   static const String loginSubTitle = 'Let\'s go shopping together';
@@ -36,14 +47,12 @@ class YAppString {
   static const String dontRecived = 'Don\'t receive the code ?';
   static const String tapToResend = 'Tap To Resend';
 
-  /// --- Onbarding Screens Texts
-  static const String onBoardingTitle1 = 'wear your story.';
-  static const String onBoardingTitle2 = 'curated just for you.';
-  static const String onBoardingTitle3 = 'discover new trends.';
-  static const String onBoardingSubTitle1 =
-      'Style is personal. Mix, match and show\nthe world your look.';
-  static const String onBoardingSubTitle2 =
-      'Hand-picked outfits and accessories that match your vibe.';
-  static const String onBoardingSubTitle3 =
-      'From elegant dresses to chic jackets and heels explore what’s treading.';
+  /// --- Home Screen Text
+  static const String homeTitle = 'Good day for shopping';
+  static const String homeSubTitle = 'Yonos Mahmoud';
+  static const String searchText = 'Search in store';
+  static const String bestSeller = 'Best Seller';
+  static const String newArrival = 'New Arrival';
+  static const String hotTranding = 'Hot Trending';
+  static const String hotCollection = 'Hot Collections';
 }
