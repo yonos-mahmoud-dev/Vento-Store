@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class YCartCounterIcon extends StatelessWidget {
-  const YCartCounterIcon({super.key, required this.onPressedIcon});
+  const YCartCounterIcon({super.key, required this.onPressedIcon, this.iconSize = 34});
 
   final VoidCallback onPressedIcon;
+  final double? iconSize;
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +13,10 @@ class YCartCounterIcon extends StatelessWidget {
       children: [
         IconButton(
           onPressed: onPressedIcon,
-          icon: const Icon(Iconsax.shopping_bag, size: 34),
+          icon:  Icon(Iconsax.shopping_bag, size: iconSize),
         ),
         Positioned(
-          right: 2,
+          right: 3,
           child: Container(
             alignment: Alignment.center,
             width: 16,

@@ -7,7 +7,7 @@ import 'package:vento_store/feature/authentication/signup/views/interest_view.da
 import 'package:vento_store/feature/authentication/signup/views/setup_verythings_view.dart';
 import 'package:vento_store/feature/authentication/signup/views/sign_up_view.dart';
 import 'package:vento_store/feature/authentication/signup/views/verify_email_view.dart';
-import 'package:vento_store/feature/home/views/home_view.dart';
+import 'package:vento_store/feature/shop/home/views/home_view.dart';
 import 'app_routes.dart';
 
 class AppRouter {

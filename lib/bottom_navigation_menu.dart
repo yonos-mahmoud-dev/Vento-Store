@@ -3,7 +3,8 @@ import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
 import 'package:vento_store/core/constants/app_colors.dart';
 import 'package:vento_store/core/utils/helpers/exports.dart';
-import 'package:vento_store/feature/home/views/home_view.dart';
+import 'package:vento_store/feature/shop/home/views/home_view.dart';
+import 'package:vento_store/feature/shop/store/views/store_view.dart';
 
 class BottomNavigationMenu extends StatelessWidget {
   const BottomNavigationMenu({super.key});
@@ -77,7 +78,7 @@ class BottomNavigationMenuProvider with ChangeNotifier {
 
   List<Widget> screens = [
     const HomeView(),
-    Container(color: Colors.red),
+    const StoreView(),
     Container(color: Colors.blue),
     Container(color: Colors.amber),
   ];

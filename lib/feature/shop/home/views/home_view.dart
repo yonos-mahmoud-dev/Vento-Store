@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vento_store/core/constants/app_sizes.dart';
 import 'package:vento_store/core/constants/app_strings.dart';
-import 'package:vento_store/feature/home/widgets/categories/y_best_seller_categories.dart';
-import 'package:vento_store/feature/home/widgets/categories/y_hot_collections.dart';
-import 'package:vento_store/feature/home/widgets/categories/y_hot_trending.dart';
-import 'package:vento_store/feature/home/widgets/categories/y_new_arrival.dart';
-import 'package:vento_store/feature/home/widgets/y_carousel_slider.dart';
-import 'package:vento_store/feature/home/widgets/y_dot_rounded_container.dart';
-import 'package:vento_store/feature/home/widgets/y_home_app_bar.dart';
-import 'package:vento_store/feature/home/widgets/categories/y_home_categories.dart';
+import 'package:vento_store/feature/shop/home/widgets/categories/y_best_seller_categories.dart';
+import 'package:vento_store/feature/shop/home/widgets/categories/y_hot_collections.dart';
+import 'package:vento_store/feature/shop/home/widgets/categories/y_hot_trending.dart';
+import 'package:vento_store/feature/shop/home/widgets/categories/y_new_arrival.dart';
+import 'package:vento_store/feature/shop/home/widgets/y_carousel_slider.dart';
+import 'package:vento_store/feature/shop/home/widgets/y_dot_rounded_container.dart';
+import 'package:vento_store/feature/shop/home/widgets/y_home_app_bar.dart';
+import 'package:vento_store/feature/shop/home/widgets/categories/y_home_categories.dart';
 import 'package:vento_store/shared/widgets/container/y_search_container.dart';
 import 'package:vento_store/shared/widgets/layout/y_grid_layout.dart';
 import 'package:vento_store/shared/widgets/text/y_seation_heading.dart';
@@ -22,6 +22,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: YSizes.defaultSpace,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vento_store/core/constants/app_colors.dart';
 import 'package:vento_store/core/constants/app_sizes.dart';
-import 'package:vento_store/feature/home/viewmodel/home_view_model.dart';
+import 'package:vento_store/feature/shop/home/viewmodel/home_view_model.dart';
 
 class YDotRoundedContainer extends StatelessWidget {
   const YDotRoundedContainer({super.key});

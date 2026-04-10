@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vento_store/core/constants/app_images.dart';
-import 'package:vento_store/feature/home/viewmodel/home_view_model.dart';
+import 'package:vento_store/feature/shop/home/viewmodel/home_view_model.dart';
 import 'package:vento_store/shared/widgets/container/y_container_image.dart';
 
 class YCarouselDlider extends StatelessWidget {

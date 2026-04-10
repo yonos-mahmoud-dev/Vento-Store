@@ -75,6 +75,7 @@ flutter:
     - assets/images/onboarding/
     - assets/images/banners/
     - assets/images/products/
+    - assets/images/brands/
 
   # example:
   fonts:
