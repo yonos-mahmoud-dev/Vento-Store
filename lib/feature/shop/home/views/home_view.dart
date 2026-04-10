@@ -77,6 +77,7 @@ class HomeView extends StatelessWidget {
                 /// --- Best Sellers Categories
                 YGridLayOut(
                   itemCount: 10,
+                  scrollPhysics: const BouncingScrollPhysics(),
                   mainAxisExtent: 275,
                   itemBuilder: (BuildContext context, int index) {
                     return const YBestSellerCategories();
@@ -94,6 +95,7 @@ class HomeView extends StatelessWidget {
                 YGridLayOut(
                   itemCount: 10,
                   mainAxisExtent: 275,
+                  scrollPhysics: const BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return const YNewArrival();
                   },
@@ -109,6 +111,7 @@ class HomeView extends StatelessWidget {
                 /// ---  hotTranding Categories
                 YGridLayOut(
                   itemCount: 10,
+                  scrollPhysics: const BouncingScrollPhysics(),
                   mainAxisExtent: 275,
                   itemBuilder: (BuildContext context, int index) {
                     return const YHotTrending();
@@ -126,6 +129,7 @@ class HomeView extends StatelessWidget {
                 YGridLayOut(
                   itemCount: 10,
                   mainAxisExtent: 275,
+                  scrollPhysics: const BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return const YHotCollections();
                   },

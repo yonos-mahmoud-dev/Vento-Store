@@ -7,9 +7,11 @@ class YGridLayOut extends StatelessWidget {
     required this.itemCount,
     this.mainAxisExtent,
     required this.itemBuilder,
+    required this.scrollPhysics,
   });
   final int itemCount;
   final double? mainAxisExtent;
+  final ScrollPhysics scrollPhysics;
   final Widget? Function(BuildContext, int) itemBuilder;
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class YGridLayOut extends StatelessWidget {
       child: GridView.builder(
         itemCount: itemCount,
         padding: EdgeInsets.zero,
-        // physics: const NeverScrollableScrollPhysics(),
+        physics: scrollPhysics,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
